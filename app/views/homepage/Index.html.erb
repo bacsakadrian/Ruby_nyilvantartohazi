@@ -1,0 +1,24 @@
+<div id="main">
+    <table id="employees">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Start date (in days)</th>
+            <th>Day offs count</th>
+            <th>Is Boss</th>
+        </tr>
+        <% @employees.each do |employee| %>
+            <tr>
+                <th><%= link_to employee.firstname, employee_path(employee) %></th>
+                <th><%= employee.lastname %></th>
+                <th><%= employee.age %></th>
+                <th><%= employee.days %></th>
+                <th><%= employee.daysoff %></th>
+                <th><%= employee.isboss %></th>
+                <th><%= link_to "Szerkesztés", edit_employee_path(employee) %></th>
+                <th>Törlés</th>
+            </tr>
+        <% end %>
+    </table>
+</div>

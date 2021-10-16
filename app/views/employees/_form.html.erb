@@ -1,0 +1,18 @@
+<fieldset>
+    <legend>Új alkalmazott</legend>
+    <%= form_for @employee do |form| %>
+        <div><%= form.label :firstname %></div>
+        <div><%= form.text_field :firstname, size: 14 %></div>
+        <div><%= form.label :lastname %></div>
+        <div><%= form.text_field :lastname, size: 14 %></div>
+        <div><%= form.label :age %></div>
+        <div><%= form.number_field :age, min: 18 %></div>
+        <div><%= form.label :days %></div>
+        <div><%= form.number_field :days %></div>
+        <div><%= form.label :daysoff %></div>
+        <div><%= form.number_field :daysoff %></div>
+        <div><%= form.label :isboss %></div>
+        <div><%= form.check_box :isboss %></div>
+        <div><%= submit_tag "Küldés" %>
+        <%end%>
+</fieldset>
