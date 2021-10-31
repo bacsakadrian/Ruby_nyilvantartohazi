@@ -11,6 +11,8 @@
         <div><%= form.number_field :days %></div>
         <div><%= form.label :daysoff %></div>
         <div><%= form.number_field :daysoff %></div>
+        <div><%= form.label :company %></div>
+        <div><%= form.collection_select :company_id, Company.order(:Name), :id, :Name, include_blank: true %></div>
         <div><%= form.label :isboss %></div>
         <div><%= form.check_box :isboss %></div>
         <div><%= submit_tag "Küldés" %>
