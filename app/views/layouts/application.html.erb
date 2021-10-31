@@ -11,27 +11,13 @@
   </head>
 
   <body>
-  <div id="header">
-    <div id="head">
-      Alkalmazott nyilvántartó alkalmazás
-    </div>
-    <div id="menu-container">
-      <ul id="menu">
-        <li id="menuitem">
-        <%= link_to "Kezdőlap", '/' %>
-        </li>
-        <li id="menuitem">
-          <%= link_to "Új alkalmazott hozzáadása", '/employees/new' %>
-        </li>
-        <li id="menuitem">
-          <%= link_to "Statisztika", '/statistics' %>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <% if logged_in? %>
   <div id="content">
-    <%= yield %>
+    <%= render '/layouts/loggedin' %>
   </div>
+  <% else %>
+    <%= render '/layouts/guest' %>
+  <% end %>
   <div id="footer">
     Neptunkód: NMNBXT, RoR 2021
   </div>

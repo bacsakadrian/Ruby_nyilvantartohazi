@@ -1,0 +1,22 @@
+<div id="header">
+<div id="head">
+  Alkalmazott nyilvántartó alkalmazás
+</div>
+<div id="menu-container">
+  <ul id="menu">
+    <li id="menuitem">
+    <%= link_to "Kezdőlap", '/' %>
+    </li>
+    <li id="menuitem">
+      <%= link_to "Új alkalmazott hozzáadása", '/employees/new' %>
+    </li>
+    <li id="menuitem">
+      <%= link_to "Statisztika", '/statistics' %>
+    </li>
+    <li id="menuitem">
+      <%= link_to "Kijelentkezés", '/sessions/destroy' %>
+    </li>
+  </ul>
+</div>
+</div>
+<%= yield %>

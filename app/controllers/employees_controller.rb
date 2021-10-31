@@ -34,6 +34,13 @@ class EmployeesController < ApplicationController
         @employee = Employee.find(params[:id])
     end
 
+    def destroy
+        @employee = Employee.find(params[:id])
+
+        if @employee.delete
+            redirect_to root_path
+        end
+    end
 
     private
     def my_params

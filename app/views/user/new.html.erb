@@ -1,0 +1,21 @@
+<h1>Regisztráció:</h1>
+<fieldset>
+    <legend>Regisztráció</legend>
+    <%= form_for @user, url: '/user/create', method: :post do |form| %>
+        <div>
+            <%= form.label :username %>
+            <%= form.text_field :username, size: 20 %>
+        </div>
+        <div>
+            <%= form.label :password %>
+            <%= form.password_field :password, size: 20 %>
+        </div>
+
+        <div>
+            <%= form.label :password_confirmation %>
+            <%= form.password_field :password_confirmation, size: 20%>
+        </div>
+
+        <%= form.submit "Regisztráció" %>
+    <% end %>
+</fieldset>

@@ -1,0 +1,16 @@
+<div id="header">
+<div id="head">
+  Alkalmazott nyilvántartó alkalmazás
+</div>
+<div id="menu-container">
+  <ul id="menu">
+    <li id="menuitem">
+      <%= link_to "Regisztráció", '/user/new' %>
+    </li>
+    <li id="menuitem">
+      <%= link_to "Bejelentkezés", '/sessions/create' %>
+    </li>
+  </ul>
+</div>
+</div>
+<%= yield %>

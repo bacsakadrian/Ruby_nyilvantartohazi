@@ -1,4 +1,5 @@
 <div id="main">
+    <% if logged_in? %>
     <table id="employees">
         <tr>
             <th>First Name</th>
@@ -17,8 +18,9 @@
                 <th><%= employee.daysoff %></th>
                 <th><%= employee.isboss %></th>
                 <th><%= link_to "Szerkesztés", edit_employee_path(employee) %></th>
-                <th>Törlés</th>
+                <th><%= link_to "Törlés", employee_path(employee), method: :delete %></th>
             </tr>
         <% end %>
     </table>
+    <% end %>
 </div>

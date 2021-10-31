@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_31_114836) do
+ActiveRecord::Schema.define(version: 2021_10_31_132811) do
 
   create_table "companies", charset: "utf8mb4", force: :cascade do |t|
     t.string "Name"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 2021_10_31_114836) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "company_id"
     t.index ["company_id"], name: "index_employees_on_company_id"
+  end
+
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
