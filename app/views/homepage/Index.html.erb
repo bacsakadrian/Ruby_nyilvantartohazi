@@ -1,5 +1,6 @@
 <div id="main">
     <% if logged_in? %>
+    <%= will_paginate @employees %>
     <table id="employees">
         <tr>
             <th>First Name</th>
