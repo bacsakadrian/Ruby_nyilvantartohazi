@@ -2,12 +2,13 @@ require "test_helper"
 
 class EmployeesControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get employees_new_url
+    get new_employee_url
     assert_response :success
   end
 
   test "should get edit" do
-    get employees_edit_url
+    newemployee = employees(:one)
+    get edit_employee_path(newemployee.id)
     assert_response :success
   end
 end

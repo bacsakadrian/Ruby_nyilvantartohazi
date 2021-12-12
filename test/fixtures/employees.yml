@@ -1,17 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  firstname: MyString
-  lastname: MyString
-  age: 9.99
-  days: 9.99
-  daysoff: 9.99
+  firstname: Employee1
+  lastname: Employee1
+  age: 19
+  days: 300
+  daysoff: 10
   isboss: false
 
 two:
-  firstname: MyString
-  lastname: MyString
-  age: 9.99
-  days: 9.99
-  daysoff: 9.99
-  isboss: false
+  firstname: Boss
+  lastname: Boss
+  age: 24
+  days: 400
+  daysoff: 10
+  isboss: true

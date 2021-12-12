@@ -1,13 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Name: MyString
-  string,: MyString
-  City: MyString
-  string: MyString
+  Name: Company1
+  City: City1
 
 two:
-  Name: MyString
-  string,: MyString
-  City: MyString
-  string: MyString
+  Name: Company2
+  City: City2
