@@ -5,9 +5,9 @@ class RendszertesztsTest < ApplicationSystemTestCase
     visit '/sessions/create'
     assert_selector 'legend', text: 'Bejelentkezés'
 
-    fill_in "username", with: "teszt"
+    fill_in "username_", with: "teszt"
     fill_in "password", with: "12345"
 
-    click_on 'Bejelentkezés'
+    click_on 'Belépés'
   end
 end
